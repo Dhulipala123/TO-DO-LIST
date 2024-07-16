@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Development Challenge</title>
+    
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <style>
+        /* Basic CSS styles */
+        body {
+            background-color: lightgreen;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            font-weight: bold;
+            color: red;
+        }
+
+        p {
+            /* text-align: center; */
+            color: green;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+        button:hover{
+            background-color: darkblue;
+        }
+
+        a {
+            color: green;
+            margin: 0 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Webpage</h1>
+    <p style="text-align: center;">This is a simple webpage template. </p>
+    <button id="myButton">Click me</button>
+    <br><br>
+
+    <form>
+        <label for = 'name'> NAME: </label>
+        <input type = 'text' id = 'name' name = 'name'><br><br>
+        <!-- <input type = 'submit' id = 'submit' value = 'Submit'> -->
+        <button id = 'submit'>Submit</button>
+    </form>
+    <script>
+        // Basic JavaScript code
+        function changeBgColor() {
+            var r = Math.floor(Math.random() * 256)
+            var g = Math.floor(Math.random() * 256)
+            var b = Math.floor(Math.random() * 256)
+            document.body.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+            alert('You clicked the button!')
+        }
+
+        document.getElementById('myButton').addEventListener('click', changeBgColor);
+
+        document.getElementById("submit").addEventListener("click", function() {
+            alert("This is alert message")
+        });
+
+    </script>
+</body>
+</html>
